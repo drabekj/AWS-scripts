@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# For all EC2 instances across all regions disable termination protection and afterwards terminate them.
+
 for region in `aws ec2 describe-regions --output text | cut -f3`
 do
      echo -e "\nListing Instances in region:'$region'..."
